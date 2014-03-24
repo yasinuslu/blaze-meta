@@ -3,7 +3,7 @@ blaze-meta
 
 A meteor package that makes it easy to manage meta-data
 
-# NOTE: This package works with shark branch
+### NOTE: This package works with shark branch
 
 ```
 mrt add blaze-meta
