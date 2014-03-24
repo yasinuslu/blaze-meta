@@ -20,10 +20,10 @@ Tinytest.add("Tags", function(test) {
     "og:title": "Titlee"
   }
 
-  Meta.add("og:title", meta["og:title"]);
+  Meta.set("og:title", meta["og:title"]);
   test.equal(Meta.hash()["og:title"], meta["og:title"], "Can i add meta tag");
 
-  Meta.remove("og:title");
+  Meta.unset("og:title");
   test.isUndefined(Meta.hash()["og:title"], "Can i remove meta tag");
 });
 
@@ -37,9 +37,9 @@ testAsyncMulti("HTML", [
   },
   function (test, expect) {
     var title = "Open Graph Title";
-    Meta.add("og:title", title);
-    Meta.add("removed", "Will be removed");
-    Meta.remove("removed");
+    Meta.set("og:title", title);
+    Meta.set("removed", "Will be removed");
+    Meta.unset("removed");
 
     Deps.flush();
 
