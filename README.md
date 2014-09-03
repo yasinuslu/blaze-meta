@@ -6,7 +6,7 @@ A meteor package that makes it easy to manage meta-data
 ### NOTE: This package only works with blaze
 
 ```
-mrt add blaze-meta
+meteor add yasinuslu:blaze-meta
 ```
 
 ```js
