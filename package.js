@@ -5,7 +5,7 @@ Package.describe({
   name: "yasinuslu:blaze-meta"
 });
 
-Package.onUse(function(api) {
+Package.on_use(function(api) {
   api.use("underscore", "client");
   api.use("deps", "client");
   api.use("session", "client");
