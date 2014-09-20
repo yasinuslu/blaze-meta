@@ -1,6 +1,6 @@
 Package.describe({
   summary: 'A package that makes it easy to manage meta-data',
-  version: "0.1.2",
+  version: "0.1.3",
   git: "https://github.com/yasinuslu/blaze-meta.git",
   name: "yasinuslu:blaze-meta"
 });
