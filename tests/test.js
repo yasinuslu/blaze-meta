@@ -20,17 +20,17 @@ Tinytest.add("Title", function(test) {
   test.equal(Meta.getTitle(), "test | " + config.options.suffix, "can title be function ?");
 });
 
-Tinytest.add("Tags", function(test) {
-  var meta = {
-    "og:title": "Titlee"
-  }
+// Tinytest.add("Tags", function(test) {
+//   var meta = {
+//     "og:title": "Titlee"
+//   }
 
-  Meta.set("og:title", meta["og:title"]);
-  test.equal(Meta.hash()["og:title"], meta["og:title"], "Can i add meta tag");
+//   Meta.set("og:title", meta["og:title"]);
+//   test.equal(Meta.hash()["og:title"], meta["og:title"], "Can i add meta tag");
 
-  Meta.unset("og:title");
-  test.isUndefined(Meta.hash()["og:title"], "Can i remove meta tag");
-});
+//   Meta.unset("og:title");
+//   test.isUndefined(Meta.hash()["og:title"], "Can i remove meta tag");
+// });
 
 testAsyncMulti("HTML", [
 
