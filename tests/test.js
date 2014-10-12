@@ -14,7 +14,7 @@ Tinytest.add("Title", function(test) {
   Meta.setTitle("asd");
   test.equal(Meta.getTitle(), "asd | " + config.options.suffix, "Is suffix working ?");
 
-  Meta.setTitle(function () {
+  Meta.setTitle(function() {
     return "test"
   });
   test.equal(Meta.getTitle(), "test | " + config.options.suffix, "can title be function ?");
@@ -33,27 +33,28 @@ Tinytest.add("Tags", function(test) {
 });
 
 testAsyncMulti("HTML", [
-  function (test, expect) {
+
+  function(test, expect) {
     Meta.setTitle("test");
 
     Deps.flush();
 
-    Meteor.defer(expect(function () {
+    Meteor.defer(expect(function() {
       test.equal(document.title, Meta.getTitle(), "is title set on DOM ?");
     }));
   },
-  function (test, expect) {
-    Meta.setTitle(function () {
+  function(test, expect) {
+    Meta.setTitle(function() {
       return "My Title"
     });
 
     Deps.flush();
 
-    Meteor.defer(expect(function () {
+    Meteor.defer(expect(function() {
       test.equal(document.title, Meta.getTitle(), "is title set on DOM ?");
     }));
   },
-  function (test, expect) {
+  function(test, expect) {
     var title = "Open Graph Title";
     Meta.set("og:title", title);
     Meta.set("removed", "Will be removed");
@@ -61,7 +62,9 @@ testAsyncMulti("HTML", [
 
     Deps.flush();
 
-    Meteor.defer(expect(function () {
+    debugger
+
+    Meteor.defer(expect(function() {
       test.equal($("meta[property='og:title']").attr("content"), title, "is og:title set on DOM ?");
       test.isUndefined($("meta[property='og:removed']").attr("content"), "can remove a tag on DOM ?");
     }));

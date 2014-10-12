@@ -1,5 +1,5 @@
 <template name="MetaTags">
   {{#each tags}}
-    <meta property="{{this.prop}}" content="{{this.content}}" />
+    {{> _MetaTag }}
   {{/each}}
 </template>
