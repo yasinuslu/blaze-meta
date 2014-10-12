@@ -1,6 +1,6 @@
 Package.describe({
-  summary: 'A package that makes it easy to manage meta-data',
-  version: "0.2.0",
+  summary: 'Blaze-meta makes it super simple to manage SEO data.',
+  version: "0.2.1",
   git: "https://github.com/yasinuslu/blaze-meta.git",
   name: "yasinuslu:blaze-meta"
 });
