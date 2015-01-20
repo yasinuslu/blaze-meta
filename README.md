@@ -1,6 +1,8 @@
 blaze-meta
 ==========
 
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yasinuslu/blaze-meta?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 A meteor package that makes it easy to manage meta-data
 
 ```
