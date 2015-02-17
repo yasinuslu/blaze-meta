@@ -1,6 +1,6 @@
 Package.describe({
   summary: 'Blaze-meta makes it super simple to manage SEO data.',
-  version: "0.2.2",
+  version: "0.3.0",
   git: "https://github.com/yasinuslu/blaze-meta.git",
   name: "yasinuslu:blaze-meta"
 });
@@ -19,7 +19,7 @@ Package.on_use(function(api) {
 
   // check if is this Meteor 0.9 and add 0.9 related code
   if (api.versionsFrom) {
-    api.versionsFrom('METEOR@0.9.0');
+    api.versionsFrom('METEOR@0.9.1');
   }
 });
 
