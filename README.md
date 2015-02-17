@@ -37,6 +37,23 @@ Meta.set({
 });
 ```
 
+or
+
+```js
+Meta.set([
+  {
+    name: "name",
+    property: "apple-mobile-web-app-capable",
+    content: "yes"
+  },
+  {
+    name: "property",
+    property: "og:locale",
+    content: "en_GB"
+  }
+]);
+```
+
 which results in:
 
 ```html

@@ -7,8 +7,8 @@ Package.describe({
 
 Package.on_use(function(api) {
   api.use("underscore", "client");
-  api.use("deps", "client");
-  api.use("session", "client");
+  api.use("tracker", "client");
+  api.use("reactive-dict", "client");
   api.use("ui", "client");
   api.use("templating", "client");
 

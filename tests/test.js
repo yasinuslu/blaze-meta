@@ -37,7 +37,7 @@ testAsyncMulti("HTML", [
   function(test, expect) {
     Meta.setTitle("test");
 
-    Deps.flush();
+    Tracker.flush();
 
     Meteor.defer(expect(function() {
       test.equal(document.title, Meta.getTitle(), "is title set on DOM ?");
@@ -48,7 +48,7 @@ testAsyncMulti("HTML", [
       return "My Title"
     });
 
-    Deps.flush();
+    Tracker.flush();
 
     Meteor.defer(expect(function() {
       test.equal(document.title, Meta.getTitle(), "is title set on DOM ?");
@@ -60,13 +60,45 @@ testAsyncMulti("HTML", [
     Meta.set("removed", "Will be removed");
     Meta.unset("removed");
 
-    Deps.flush();
+    Tracker.flush();
 
-    debugger
+    debugger;
 
     Meteor.defer(expect(function() {
       test.equal($("meta[property='og:title']").attr("content"), title, "is og:title set on DOM ?");
-      test.isUndefined($("meta[property='og:removed']").attr("content"), "can remove a tag on DOM ?");
+      test.isUndefined($("meta[property='removed']").attr("content"), "can remove a tag on DOM ?");
+    }));
+  },
+
+  function(test, expect) {
+
+    Meta.set([
+      {
+        name: "name",
+        property: "apple-mobile-web-app-capable",
+        content: "yes"
+      },
+      {
+        name: "property",
+        property: "og:locale",
+        content: "en_GB"
+      },
+      {
+        name: "attrName",
+        property: "tag3",
+        content: "attrContent"
+      }
+    ]);
+    Meta.unset("tag3");
+
+    Tracker.flush();
+
+    debugger;
+
+    Meteor.defer(expect(function() {
+      test.equal($("meta[name='apple-mobile-web-app-capable']").attr("content"), "yes", "is apple-mobile-web-app-capable set on DOM?");
+      test.equal($("meta[property='og:locale']").attr("content"), "en_GB", "is og:locale set to en_GB on DOM?");
+      test.isUndefined($("meta[attrName='tag3']").attr("content"), "can remove tag3 on DOM ?");
     }));
   }
 ]);
