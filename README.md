@@ -13,8 +13,7 @@ meteor add yasinuslu:blaze-meta
 Meta.config({
   options: {
     title: "Default Title",
-    suffix: "Suffix",
-    namespace: "project"
+    suffix: "Suffix"
   }
 });
 
@@ -57,7 +56,7 @@ Meta.set([
 which results in:
 
 ```html
-<meta property="og:title" content="Titleee">
+<meta name="apple-mobile-web-app-capable" content="yes">
 ```
 
 It will be updated on DOM automatically.
