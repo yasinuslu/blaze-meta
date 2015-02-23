@@ -19,7 +19,7 @@ Package.on_use(function(api) {
 
   // check if is this Meteor 0.9 and add 0.9 related code
   if (api.versionsFrom) {
-    api.versionsFrom('METEOR@0.9.0');
+    api.versionsFrom('METEOR@1.0');
   }
 });
 
