@@ -5,6 +5,8 @@ blaze-meta
 
 A meteor package that makes it easy to manage meta-data
 
+If you're looking for iron-router integration you should check out https://atmospherejs.com/lookback/seo
+
 ```
 meteor add yasinuslu:blaze-meta
 ```
