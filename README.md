@@ -7,7 +7,7 @@ A meteor package that makes it easy to manage meta-data
 
 - If you're looking for iron-router integration you should check out https://atmospherejs.com/lookback/seo
 
-This package will probably deprecated in near future, check out https://github.com/kadirahq/meteor-dochead
+This package will probably be deprecated in near future, check out https://github.com/kadirahq/meteor-dochead
 
 ```
 meteor add yasinuslu:blaze-meta
